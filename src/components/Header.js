@@ -16,6 +16,7 @@ const HeaderContainer = styled.div`
     background-color: #1e293b;
     color: white;
     font-family: arial;
+    padding: 20px 0;
 `
 
 export default Header;
