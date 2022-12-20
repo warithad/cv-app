@@ -1,23 +1,21 @@
 import React from "react";
+import styled from "styled-components";
 
 const Header =()=> {
     return (
-        <div style={headerBoxStyle}>
-            <h1 style={headerStyle}>CV APP</h1>
-        </div>
+        <HeaderContainer>
+            <h1>CV APP</h1>
+        </HeaderContainer>
     )
 }
 
-const headerBoxStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#1e293b",
-}
-
-const headerStyle = {
-    color: "white",
-    fontFamily: "Arial"
-}
+const HeaderContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e293b;
+    color: white;
+    font-family: arial;
+`
 
 export default Header;
