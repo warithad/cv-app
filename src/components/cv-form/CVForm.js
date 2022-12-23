@@ -15,7 +15,9 @@ const CVForm =({cv, handleChange})=>{
 const CVFormStyle = styled.form`
     display: flex;
     flex-direction: column;
-    width: 50rem;
+    width: 40rem;
+    background-color: #d4d4d4;
+    padding: 3rem;
 `
 
 export default CVForm;

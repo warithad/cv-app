@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         justify-content: space-between;
         min-height: 100vh;
+        gap: 5rem;
     }
 `
 
