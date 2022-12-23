@@ -1,8 +1,10 @@
+import styled from "styled-components";
+
 const Input =(props)=>{
     const {placeHolder, type, name, value, handleChange} = props;
 
     return (
-        <input 
+        <InputContainer 
             onChange={handleChange}
             placeholder={placeHolder}
             type={type}
@@ -12,5 +14,9 @@ const Input =(props)=>{
     )
 }
 
+const InputContainer = styled.input`
+    height: 30px;
+    
+`
 
 export default Input;

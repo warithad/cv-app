@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import styled from "styled-components";
 import CVForm from "./cv-form/CVForm"
 import CVPage from "./cv-page/CVPage"
 
@@ -42,10 +43,16 @@ export default class Main extends Component{
     }
     render(){
         return (
-            <>
+            <MainStyle>
                 <CVForm cv={this.state.cv}/>
                 <CVPage/>
-            </>
+            </MainStyle>
         )
     }
 }
+
+const MainStyle = styled.main`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`

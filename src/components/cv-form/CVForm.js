@@ -1,13 +1,21 @@
-import React, { Component } from 'react';
+
 import PersonsalInfo from './PersonalInfo';
+import  styled  from 'styled-components' 
 
 const CVForm =({cv, handleChange})=>{
 
         return (
-            <form>
+            <CVFormStyle>
                 <PersonsalInfo personal={cv.personal} handleChange={handleChange}/>
-            </form>
+            </CVFormStyle>
         )
 }
+
+
+const CVFormStyle = styled.form`
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+`
 
 export default CVForm;

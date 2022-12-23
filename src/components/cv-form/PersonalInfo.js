@@ -1,11 +1,14 @@
 
 import React, { Component } from "react";
 import Input from "./Input";
+import SectionStyle from "./style/SectionStyle";
 
 const PersonsalInfo =({personal, handleChange})=>{
     
         return (
-            <section>
+            <SectionStyle>
+                <h1>Personal Information</h1>
+                
                 <Input name='firstName'
                        placeHolder='First Name' 
                        type='text' 
@@ -54,7 +57,7 @@ const PersonsalInfo =({personal, handleChange})=>{
                        value={personal.desc}
                        handleChange={e => handleChange(e)}
                 />
-             </section>
+             </SectionStyle>
         )
 }    
 
