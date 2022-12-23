@@ -2,6 +2,7 @@
 import PersonsalInfo from './PersonalInfo';
 import  styled  from 'styled-components' 
 import Education from './Education';
+import Experience from './Experience';
 
 const CVForm =({cv, handleChange})=>{
 
@@ -9,7 +10,7 @@ const CVForm =({cv, handleChange})=>{
             <CVFormStyle>
                 <PersonsalInfo personal={cv.personal} handleChange={handleChange}/>
                 <Education education={cv.education} handleChange={handleChange}/>
-
+                <Experience experience={cv.experience} handleChange={handleChange}/>
             </CVFormStyle>
         )
 }
