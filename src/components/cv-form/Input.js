@@ -16,7 +16,11 @@ const Input =(props)=>{
 
 const InputContainer = styled.input`
     height: 30px;
-    
+    border: none;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
 `
 
 export default Input;
