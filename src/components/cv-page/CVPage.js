@@ -17,7 +17,9 @@ const CVPage =({cv})=> {
 
 const CVPageStyle = styled.div`
     background-color: white;
-
+    min-height: 120vh;
+    width: 46rem;
+    padding: 3rem 0;
 `
 
 export default CVPage

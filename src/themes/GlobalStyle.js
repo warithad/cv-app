@@ -17,6 +17,16 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
         gap: 5rem;
     }
+
+    /*CV Page*/
+    .cv-name{
+        font-family: arial;
+        font-size: 3rem;
+    }
+
+    .cv-info{
+        font-size: 20px;
+    }
 `
 
 export default GlobalStyle;

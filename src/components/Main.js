@@ -53,6 +53,8 @@ export default class Main extends Component{
 
 const MainStyle = styled.main`
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 4rem;
     justify-content: center;
 `
