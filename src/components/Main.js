@@ -45,7 +45,7 @@ export default class Main extends Component{
         return (
             <MainStyle>
                 <CVForm cv={this.state.cv}/>
-                <CVPage/>
+                <CVPage cv={this.state.cv}/>
             </MainStyle>
         )
     }
