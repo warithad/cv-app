@@ -27,6 +27,15 @@ const GlobalStyle = createGlobalStyle`
     .cv-info{
         font-size: 20px;
     }
+    /*Buttons*/
+
+    .add-button:hover{
+        background-color: black;
+    }
+
+    .delete-button:hover{
+        background-color: #7f1d1d;
+    }
 `
 
 export default GlobalStyle;

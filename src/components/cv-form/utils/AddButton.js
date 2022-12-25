@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import { AiOutlinePlus } from 'react-icons/ai'
-const AddButton =({onClick})=>{
+const AddButton =({onClickAddButton})=>{
     return (
-        <ButtonContainer 
-            onClick={onClick}>Add 
+        <ButtonContainer
+            className="add-button" 
+            onClick={onClickAddButton}>Add 
             <AiOutlinePlus/>
         </ButtonContainer>
     )
