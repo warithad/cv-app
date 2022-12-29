@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components";
 import CVForm from "./cv-form/CVForm"
 import CVPage from "./cv-page/CVPage"
+import uniqid from "uniqid"
 
 const defaultCv = {
        personal: {
@@ -15,7 +16,7 @@ const defaultCv = {
         },
         experiences: [
             {
-                id: '',
+                id: uniqid(),
                 position: '',
                 company: '',
                 city: '',
@@ -25,7 +26,7 @@ const defaultCv = {
         ],
         educations: [
             {
-                id: '',
+                id: uniqid(),
                 university: '',
                 city: '',
                 degree: '',
@@ -52,23 +53,94 @@ const Main =()=>{
     }
 
     const handleAddEducation =()=>{
+        setCv((prevState) =>({
+            ...prevState,
+            educations: [
+                ...prevState.educations,
+                {
+                    id: uniqid(),
+                    university: '',
+                    city: '',
+                    degree: '',
+                    from: '',
+                    to: ''
+                }
+            ]
+        }));
+    }
 
+    const handleDeleteEducation =(id)=>{
+        setCv((prevState) =>{
+            const edu = prevState.educations.filter(
+                education => education.id !== id
+            )
+            return {
+                ...prevState,
+                educations : [...edu] 
+            }
+        })
     }
-    const handleDeleteEducation =()=>{
-        
+
+    const handleChangeEducation =(e, id)=>{
+        const {name, value} = e.target;
+
+        setCv((prevState) =>{
+            const edu = prevState.educations.map(
+                education => {
+                    if(education.id === id) {
+                        return {...education, [name]: value}
+                    }
+                    return education;
+                }
+            )
+            return {...prevState,educations: [...edu]}
+        })  
     }
-    const handleChangeEducation =()=>{
-        
-    }
+
     const handleAddExperience =()=>{
-        
+        setCv((prevState) =>({
+            ...prevState,
+            experiences : [
+                ...prevState.experiences,
+                    {
+                        id: uniqid(),
+                        position: '',
+                        company: '',
+                        city: '',
+                        from: '',
+                        to: ''
+                    }
+            ]
+        }));   
     }
-    const handleDeleteExperience =()=>{
-        
+
+    const handleDeleteExperience =(id)=>{
+        setCv((prevState) =>{
+            const exp = prevState.experiences.filter(
+                experience => experience.id !== id
+            )
+            return {...prevState,
+                    experiences : [...exp]
+                   }
+        })
     }
-    const handleChangeExperience =()=>{
-        
+
+    const handleChangeExperience =(e, id)=>{
+        const {name, value} = e.target;
+
+        setCv((prevState) =>{
+            const exp = prevState.experiences.map(
+                experience =>{
+                    if(experience.id === id){
+                        return {...experience, [name]: value}
+                    }
+                    return experience;
+                }
+            )
+            return {...prevState, experiences : [...exp]}
+        })
     }
+
     const handleReset =()=>{
         setCv(defaultCv);    
     }
