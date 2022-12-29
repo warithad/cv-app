@@ -1,47 +1,53 @@
+
 import Input from "./Input";
 import SectionStyle from "./style/SectionStyle";
+import DeleteButton from "./utils/DeleteButton";
 
-const Experience =(experience, handleChange, onDelete)=>{
+const Experience =({
+                    experience, 
+                    handleChangeExperience, 
+                    handleDeleteExperience, 
+                    id}
+                    )=>{
    
     return (
         <SectionStyle>
-            <h1>Experience</h1>
-
             <Input
                 name='position'
                 placeHolder='Position'
                 type='text'
                 value={experience.position}
-                handleChange={handleChange}
+                handleChange={e => handleChangeExperience(e, id)}
             />
             <Input
                 name='company'
                 placeHolder='Company'
                 type='text'
                 value={experience.company}
-                handleChange={handleChange}
+                handleChange={e => handleChangeExperience(e, id)}
             />
             <Input
                 name='city'
                 placeHolder='City'
                 type='text'
                 value={experience.city}
-                handleChange={handleChange}
+                handleChange={e => handleChangeExperience(e, id)}
             />
             <Input
                 name='from'
                 placeHolder='From'
                 type='number'
                 value={experience.from}
-                handleChange={handleChange}
+                handleChange={e => handleChangeExperience(e, id)}
             />
             <Input
                 name='to'
                 placeHolder='To'
                 type='number'
                 value={experience.to}
-                handleChange={handleChange}
+                handleChange={e => handleChangeExperience(e, id)}
             />
+            <DeleteButton onclickDeleteButton={()=>handleDeleteExperience(id)}/>
         </SectionStyle>
    )
 }

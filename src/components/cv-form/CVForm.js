@@ -1,8 +1,6 @@
 
 import PersonsalInfo from './PersonalInfo';
 import  styled  from 'styled-components' 
-import Education from './Education';
-import Experience from './Experience';
 import ExperiencesContainer from './ExperiencesContainer';
 import EducationsContainer from './EducationsContainer';
 
@@ -31,7 +29,7 @@ const CVForm =({
                     handleDeleteExperience={handleDeleteExperience}
                 />
                 <EducationsContainer
-                    education={cv.education}
+                    educations={cv.educations}
                     handleAddEducation={handleAddEducation}
                     handleChangeEducation={handleChangeEducation}
                     handleDeleteEducation={handleDeleteEducation}

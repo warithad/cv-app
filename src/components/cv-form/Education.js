@@ -1,26 +1,30 @@
 import SectionStyle from "./style/SectionStyle";
 import Input from "./Input";
+import DeleteButton from "./utils/DeleteButton";
 
-const Education =(education, handleChange)=>{
+const Education =({
+     education,
+     handleChangeEducation,
+     handleDeleteEducation,
+     id
+    })=>{
     
     return (
         <SectionStyle>
-            <h1>Education</h1>
-            
             <Input
-                name = 'universityName'
+                name = 'university'
                 placeHolder = 'University Name'
                 type= 'text'
                 value={education.university}
-                handleChange={e => handleChange(e)}
+                handleChange={e => handleChangeEducation(e, id)}
             />
 
             <Input  
-                name = 'state'
-                placeHolder = 'State'
+                name = 'city'
+                placeHolder = 'City'
                 type= 'text'
-                value={education.state}
-                handleChange={e => handleChange(e)}
+                value={education.city}
+                handleChange={e => handleChangeEducation(e, id)}
             />
 
             <Input
@@ -28,7 +32,7 @@ const Education =(education, handleChange)=>{
                 placeHolder = 'Degree'
                 type= 'text'
                 value={education.degree}
-                handleChange={e => handleChange(e)}
+                handleChange={e => handleChangeEducation(e, id)}
             />
 
             <Input
@@ -36,7 +40,7 @@ const Education =(education, handleChange)=>{
                 placeHolder = 'From'
                 type= 'number'
                 value={education.from}
-                handleChange={e => handleChange(e)}
+                handleChange={e => handleChangeEducation(e, id)}
             />
 
             <Input
@@ -44,8 +48,10 @@ const Education =(education, handleChange)=>{
                 placeHolder = 'To'
                 type= 'number'
                 value={education.to}
-                handleChange={e => handleChange(e)}
+                handleChange={e => handleChangeEducation(e, id)}
             />
+
+            <DeleteButton onclickDeleteButton={() =>handleDeleteEducation(id)}/>
         </SectionStyle>
     )
 }
