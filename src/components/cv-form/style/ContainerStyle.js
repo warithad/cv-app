@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const SectionStyle = styled.section`
+const ContainerStyle = styled.div`
     display: flex;
     flex-direction: column;
     font-family: Arial;
-    gap: 1rem;
+    gap: 2rem;
 `
-export default SectionStyle;
+
+export default ContainerStyle;

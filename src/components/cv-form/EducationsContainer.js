@@ -1,12 +1,30 @@
-import Button from "./Button"
+import Education from "./Education";
+import ContainerStyle from "./style/ContainerStyle";
+import AddButton from "./utils/AddButton"
 
-const EducationsContainer =()=>{
+const EducationsContainer =({
+    educations,
+    handleAddEducation,
+    handleChangeEducation,
+    handleDeleteEducation
+})=>{
+    const educationItems = educations.map(
+        education => (
+            <Education 
+                education={education}
+                key={education.id}
+                id={education.id}
+                handleChangeEducation={handleChangeEducation}
+                handleDeleteEducation={handleDeleteEducation}
+            />       
+        )
+    )
     return (
-        <>
+        <ContainerStyle>
             <h1>Education</h1>
-            <></>
-            <Button title='Add'/>
-        </>
+            {educationItems}
+            <AddButton title='Add' onClickAddButton={handleAddEducation}/>
+        </ContainerStyle>
     )
 }
 
