@@ -3,14 +3,39 @@ import PersonsalInfo from './PersonalInfo';
 import  styled  from 'styled-components' 
 import Education from './Education';
 import Experience from './Experience';
+import ExperiencesContainer from './ExperiencesContainer';
+import EducationsContainer from './EducationsContainer';
 
-const CVForm =({cv, handleChange})=>{
+const CVForm =({
+    cv,
+    handleChangePersonal,
+    handleAddExperience,
+    handleChangeExperience,
+    handleDeleteExperience,
+    handleAddEducation,
+    handleChangeEducation,
+    handleDeleteEducation,
+    handleReset
+})=>{
 
         return (
             <CVFormStyle>
-                <PersonsalInfo personal={cv.personal} handleChange={handleChange}/>
-                <Education education={cv.education} handleChange={handleChange}/>
-                <Experience experience={cv.experience} handleChange={handleChange}/>
+                <PersonsalInfo 
+                    personal={cv.personal}
+                    handleChange={handleChangePersonal}
+                />
+                <ExperiencesContainer
+                    experiences={cv.experiences}
+                    handleAddExperience={handleAddExperience}
+                    handleChangeExperience={handleChangeExperience}
+                    handleDeleteExperience={handleDeleteExperience}
+                />
+                <EducationsContainer
+                    education={cv.education}
+                    handleAddEducation={handleAddEducation}
+                    handleChangeEducation={handleChangeEducation}
+                    handleDeleteEducation={handleDeleteEducation}
+                />
             </CVFormStyle>
         )
 }
