@@ -52,7 +52,8 @@ const Main =()=>{
         }))
     }
 
-    const handleAddEducation =()=>{
+    const handleAddEducation =(e)=>{
+        e.preventDefault();
         setCv((prevState) =>({
             ...prevState,
             educations: [
@@ -97,7 +98,8 @@ const Main =()=>{
         })  
     }
 
-    const handleAddExperience =()=>{
+    const handleAddExperience =(e)=>{
+        e.preventDefault();
         setCv((prevState) =>({
             ...prevState,
             experiences : [

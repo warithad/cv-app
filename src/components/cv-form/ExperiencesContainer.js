@@ -23,7 +23,7 @@ const ExperiencesContainer = ({
         <ContainerStyle>
             <h1>Experience</h1>
             {experienceItems}
-            <AddButton title='Add' onClickAddButton={handleAddExperience}/>
+            <AddButton title='Add' onClickAddButton={e => handleAddExperience(e)}/>
         </ContainerStyle>
     )
 }

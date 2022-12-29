@@ -23,7 +23,7 @@ const EducationsContainer =({
         <ContainerStyle>
             <h1>Education</h1>
             {educationItems}
-            <AddButton title='Add' onClickAddButton={handleAddEducation}/>
+            <AddButton title='Add' onClickAddButton={e => handleAddEducation(e)}/>
         </ContainerStyle>
     )
 }
