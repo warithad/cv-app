@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Educations from "../cv-form/Education"
+import Educations from "./Educations"
 import Experiences from "./Experiences"
 import PageHeader from "./PageHeader"
 
