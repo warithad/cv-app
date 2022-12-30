@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Education from "../cv-form/Education"
+import Educations from "../cv-form/Education"
 import Experiences from "./Experiences"
 import PageHeader from "./PageHeader"
 
@@ -14,6 +14,9 @@ const CVPage =({cv})=> {
              />
             <Experiences
                 experiences={cv.experiences}
+            />
+            <Educations
+                educations={cv.educations}
             />
         </CVPageStyle>
     )
