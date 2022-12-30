@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import Education from "../cv-form/Education"
+import Experiences from "./Experiences"
 import PageHeader from "./PageHeader"
 
 const CVPage =({cv})=> {
@@ -10,7 +12,9 @@ const CVPage =({cv})=> {
                 email={cv.personal.email} 
                 phoneNumber={cv.personal.phoneNumber}
              />
-                
+            <Experiences
+                experiences={cv.experiences}
+            />
         </CVPageStyle>
     )
 }
