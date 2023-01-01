@@ -13,6 +13,7 @@ const ExperienceItem =({experienceItem})=>{
 }
 
 const ExperienceItemWrapper = styled.div`
+    
 `
 export default ExperienceItem;
 

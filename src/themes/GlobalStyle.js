@@ -36,6 +36,11 @@ const GlobalStyle = createGlobalStyle`
     .delete-button:hover{
         background-color: #7f1d1d;
     }
+
+    ul{
+        list-style-type: none;
+        
+    }
 `
 
 export default GlobalStyle;

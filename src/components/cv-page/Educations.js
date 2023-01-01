@@ -20,7 +20,13 @@ const Educations =({educations})=>{
 }
 
 const EducationsContainer = styled.div`
-
+    font-family: arial;
+    padding-left: 3rem;
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 `
 
 
