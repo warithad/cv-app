@@ -10,7 +10,7 @@ const Experiences =({
             <h1>Experience</h1>
             <ul>
                 {experiences.map(experience =>{
-                    return (<li>
+                    return (<li key={experience.id}>
                         <ExperienceItem
                             experienceItem={experience}
                         />

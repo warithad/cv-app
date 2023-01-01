@@ -8,7 +8,7 @@ const Educations =({educations})=>{
             <h1>Education</h1>
             <ul>
                 {educations.map(education =>{
-                    return <li>
+                    return <li key={education.id}>
                         <EducationItem
                             educationItem={education}
                         />
